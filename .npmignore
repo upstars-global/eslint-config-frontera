@@ -4,5 +4,4 @@ tests
 .eslintrc.json
 .gitignore
 .prettierrc
-CONTRIBUTING.md
 yarn.lock
