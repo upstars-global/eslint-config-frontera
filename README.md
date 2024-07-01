@@ -1,0 +1,1 @@
+# frontera-eslint-config
