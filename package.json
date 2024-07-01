@@ -1,6 +1,6 @@
 {
-  "name": "frontera-eslint-config",
-  "version": "0.0.1",
+  "name": "eslint-config-frontera",
+  "version": "0.0.0",
   "description": "ESLint shareable config for Frontera",
   "main": "./src/eslint.js",
   "license": "MIT",
