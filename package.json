@@ -4,13 +4,13 @@
   "description": "ESLint shareable config for Frontera",
   "main": "./src/eslint.js",
   "license": "MIT",
-  "homepage": "https://github.com/ikhartov/eslint-config-frontera#readme",
+  "homepage": "https://github.com/upstars-global/eslint-config-frontera#readme",
   "bugs": {
-    "url": "https://github.com/ikhartov/eslint-config-frontera/issues"
+    "url": "https://github.com/upstars-global/eslint-config-frontera/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ikhartov/eslint-config-frontera.git"
+    "url": "git+https://github.com/upstars-global/eslint-config-frontera.git"
   },
   "exports": {
     ".": "./src/eslint.js",

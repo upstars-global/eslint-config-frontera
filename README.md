@@ -6,8 +6,10 @@ An opinionated set of ESLint rules for Frontera projects
 Install eslint-config-frontera:
 
 ```bash
-$ yarn add -D ikhartov/eslint-config-frontera
+$ yarn add -D upstars-global/eslint-config-frontera#vesrion
 ```
+
+Note: `vesrion` must be replaced with available version. see [releases](https://github.com/upstars-global/eslint-config-frontera/releases)
 
 Then, add eslint-config-frontera to the "extends" array in your ESLint file.
 Make sure to put it last, so it gets the chance to override other configs.
