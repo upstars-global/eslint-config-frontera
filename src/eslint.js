@@ -16,7 +16,6 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'eslint-config-prettier',
     bestPractices,
     es6,
     node,
@@ -29,7 +28,7 @@ module.exports = {
     parser: '@typescript-eslint/parser',
     sourceType: 'module',
   },
-  plugins: ['prettier', '@typescript-eslint'],
+  plugins: ['@typescript-eslint'],
   rules: {
     // Possible Errors (overrides from recommended set)
     'no-extra-parens': 'off',
