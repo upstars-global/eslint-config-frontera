@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-frontera",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "ESLint shareable config for Frontera",
   "main": "./src/eslint.js",
   "license": "MIT",
@@ -17,7 +17,9 @@
     "./vue": "./src/vue.js",
     "./package.json": "./package.json"
   },
-  "files": ["src"],
+  "files": [
+    "src"
+  ],
   "keywords": [
     "eslintconfig",
     "code",
