@@ -25,8 +25,7 @@ A few ESLint plugins are supported as well:
 {
   "extends": [
     "frontera",
-    "frontera/vue",
-    "frontera/prettier"
+    "frontera/vue"
   ]
 }
 ```
@@ -35,7 +34,7 @@ A few ESLint plugins are supported as well:
 Using default configurations:
 ```json
 {
-  "extends": ["frontera", "frontera/prettier"],
+  "extends": ["frontera"],
   "rules": {
     "@typescript-eslint/no-explicit-any": "error",
     "quotes": [ "error", "single" ]
@@ -46,7 +45,7 @@ Using default configurations:
 Using specific vue configurations:
 ```json
 {
-  "extends": ["frontera", "frontera/vue", "frontera/prettier"],
+  "extends": ["frontera", "frontera/vue"],
   "rules": {
     "vue/valid-v-for": "error"
   }

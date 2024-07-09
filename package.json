@@ -15,7 +15,6 @@
   "exports": {
     ".": "./src/eslint.js",
     "./vue": "./src/vue.js",
-    "./prettier": "./src/prettier.js",
     "./package.json": "./package.json"
   },
   "files": ["src"],
