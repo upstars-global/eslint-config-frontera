@@ -1,3 +1,7 @@
+# v1.0.2
+
+- merge config for prettier with default
+
 # v1.0.1
 
 - define export for prettier
