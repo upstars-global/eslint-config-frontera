@@ -1,24 +1,22 @@
-// const eslint = require.resolve('./rules/typescript');
-
 const globals = require('globals');
 const js = require('@eslint/js');
+const tseslint = require('typescript-eslint');
 const rules= require('./rules');
 // module.exports = {
 //   extends: [
-//     // 'plugin:@typescript-eslint/recommended',
 //     // 'prettier',
-//     // eslint
 //   ],
-//   plugins: ['@typescript-eslint'],
 // };
 
-module.exports = [
+module.exports = tseslint.config(
   js.configs.recommended,
+  ...tseslint.configs.recommended,
   rules.configs.bestPractices,
   rules.configs.es6,
   rules.configs.node,
   rules.configs.style,
   rules.configs.variables,
+  rules.configs.typescript,
   {
     languageOptions: {
       ecmaVersion: 'latest',
@@ -28,8 +26,11 @@ module.exports = [
         ...globals.es2025,
         ...globals.node,
       },
-      // parser: '@typescript-eslint/parser',
+      parser: tseslint.parser,
       sourceType: 'module',
+    },
+    plugins: {
+      '@typescript-eslint': tseslint.plugin,
     },
     rules: {
       // Possible Errors (overrides from recommended set)
@@ -52,4 +53,4 @@ module.exports = [
       'prefer-const': 'error',
     }
   }
-]
+)
