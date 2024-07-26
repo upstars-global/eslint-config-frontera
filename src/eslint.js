@@ -1,29 +1,24 @@
-// const bestPractices = require.resolve('./rules/best-practices');
-// const es6 = require.resolve('./rules/es6');
-// const node = require.resolve('./rules/node');
-// const style = require.resolve('./rules/style');
 // const eslint = require.resolve('./rules/typescript');
-// const variables = require.resolve('./rules/variables');
 
-import globals from 'globals';
-import js from '@eslint/js';
-
+const globals = require('globals');
+const js = require('@eslint/js');
+const rules= require('./rules');
 // module.exports = {
 //   extends: [
 //     // 'plugin:@typescript-eslint/recommended',
 //     // 'prettier',
-//     // bestPractices,
-//     // es6,
-//     // node,
-//     // style,
-//     // variables,
 //     // eslint
 //   ],
 //   plugins: ['@typescript-eslint'],
 // };
 
-export default [
+module.exports = [
   js.configs.recommended,
+  rules.configs.bestPractices,
+  rules.configs.es6,
+  rules.configs.node,
+  rules.configs.style,
+  rules.configs.variables,
   {
     languageOptions: {
       ecmaVersion: 'latest',
@@ -41,16 +36,17 @@ export default [
       'no-extra-parens': 'off',
       // Strict Mode - for ES6, never use strict.
       strict: ['error', 'never'],
+      // DEPRECATED
       // All JSDoc comments must be valid
-      'valid-jsdoc': [
-        'error',
-        {
-          prefer: { return: 'returns' },
-          requireParamDescription: true,
-          requireReturn: false,
-          requireReturnDescription: false,
-        },
-      ],
+      // 'valid-jsdoc': [
+      //   'error',
+      //   {
+      //     prefer: { return: 'returns' },
+      //     requireParamDescription: true,
+      //     requireReturn: false,
+      //     requireReturnDescription: false,
+      //   },
+      // ],
       // TODO: next rules added for tests
       // eslint-disable-next-line
       'prefer-const': 'error',

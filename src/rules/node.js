@@ -1,4 +1,3 @@
-/** @type {import('eslint').ESLint.ConfigData}  */
 module.exports = {
   rules: {
     'global-require': 'off',

@@ -1,7 +1,8 @@
-import globals from 'globals'
+const globals = require('globals')
 
-export default [
+module.exports = [
   {
+    ignores: ['node_modules'],
     languageOptions: {
       ecmaVersion: 'latest',
       globals: {

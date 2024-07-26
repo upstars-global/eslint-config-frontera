@@ -4,7 +4,6 @@
   "description": "ESLint shareable config for Frontera",
   "main": "./src/eslint.js",
   "license": "MIT",
-  "type": "module",
   "homepage": "https://github.com/upstars-global/eslint-config-frontera#readme",
   "bugs": {
     "url": "https://github.com/upstars-global/eslint-config-frontera/issues"
@@ -58,7 +57,7 @@
     "vue-eslint-parser": "^9.4.3"
   },
   "peerDependencies": {
-    "eslint": "^9.7.0",
+    "eslint": ">= 9",
     "prettier": "^3.3.3",
     "typescript": "^5.5.4",
     "vue": "^3.4.34"
