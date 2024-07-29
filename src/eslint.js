@@ -3,11 +3,6 @@ import globals from 'globals';
 import js from '@eslint/js';
 import ts from 'typescript-eslint';
 import rules from './rules/index.js';
-// module.exports = {
-//   extends: [
-//     // 'prettier',
-//   ],
-// };
 
 const config = ts.config(
   js.configs.recommended,
