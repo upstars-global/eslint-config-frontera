@@ -2,15 +2,9 @@ import pluginVue from 'eslint-plugin-vue'
 import eslint from './eslint.js'
 
 export default [
-  ...eslint.map((config) => {
-    return {
-      ...config,
-      files: ['**/*.{js,cjs,mjs,jsx,ts,mts,tsx,vue}'],
-    };
-  }),
+  ...eslint,
   ...pluginVue.configs['flat/recommended'],
   {
-    files: ['**/*.{js,cjs,mjs,jsx,ts,mts,tsx,vue}'],
     languageOptions: {
       parserOptions: {
         parser: '@typescript-eslint/parser'
