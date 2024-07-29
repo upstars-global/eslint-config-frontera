@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   rules: {
     'arrow-parens': ['warn', 'always'],
     'arrow-spacing': ['error', { after: true, before: true }],

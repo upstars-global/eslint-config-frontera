@@ -3,6 +3,7 @@
   "version": "1.0.2",
   "description": "ESLint shareable config for Frontera",
   "main": "./src/eslint.js",
+  "type": "module",
   "license": "MIT",
   "homepage": "https://github.com/upstars-global/eslint-config-frontera#readme",
   "bugs": {

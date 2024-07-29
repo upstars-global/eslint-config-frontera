@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   rules: {
     'accessor-pairs': ['error', { getWithoutSet: false, setWithoutGet: true }],
     'block-scoped-var': 'error',

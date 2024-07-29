@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   rules: {
     'global-require': 'off',
     'handle-callback-err': 'warn',

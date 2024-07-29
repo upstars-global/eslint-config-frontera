@@ -1,22 +1,24 @@
-const globals = require('globals');
-const js = require('@eslint/js');
-const tseslint = require('typescript-eslint');
-const rules= require('./rules');
+import eslintConfigPrettier from 'eslint-config-prettier';
+import globals from 'globals';
+import js from '@eslint/js';
+import ts from 'typescript-eslint';
+import rules from './rules/index.js';
 // module.exports = {
 //   extends: [
 //     // 'prettier',
 //   ],
 // };
 
-module.exports = tseslint.config(
+const config = ts.config(
   js.configs.recommended,
-  ...tseslint.configs.recommended,
+  ...ts.configs.recommended,
+  eslintConfigPrettier,
   rules.configs.bestPractices,
   rules.configs.es6,
   rules.configs.node,
   rules.configs.style,
   rules.configs.variables,
-  rules.configs.typescript,
+  ...rules.configs.typescript,
   {
     languageOptions: {
       ecmaVersion: 'latest',
@@ -26,11 +28,11 @@ module.exports = tseslint.config(
         ...globals.es2025,
         ...globals.node,
       },
-      parser: tseslint.parser,
+      parser: ts.parser,
       sourceType: 'module',
     },
     plugins: {
-      '@typescript-eslint': tseslint.plugin,
+      '@typescript-eslint': ts.plugin,
     },
     rules: {
       // Possible Errors (overrides from recommended set)
@@ -48,9 +50,8 @@ module.exports = tseslint.config(
       //     requireReturnDescription: false,
       //   },
       // ],
-      // TODO: next rules added for tests
-      // eslint-disable-next-line
-      'prefer-const': 'error',
     }
   }
 )
+
+export default config

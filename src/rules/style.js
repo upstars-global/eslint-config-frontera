@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   rules: {
     'array-bracket-spacing': ['error', 'always'],
     'block-spacing': ['error', 'always'],

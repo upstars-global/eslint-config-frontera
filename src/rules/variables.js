@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   rules: {
     'no-catch-shadow': 'warn',
     'no-delete-var': 'error',
