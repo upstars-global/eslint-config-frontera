@@ -35,17 +35,6 @@ const config = ts.config(
       'no-extra-parens': 'off',
       // Strict Mode - for ES6, never use strict.
       strict: ['error', 'never'],
-      // DEPRECATED
-      // All JSDoc comments must be valid
-      // 'valid-jsdoc': [
-      //   'error',
-      //   {
-      //     prefer: { return: 'returns' },
-      //     requireParamDescription: true,
-      //     requireReturn: false,
-      //     requireReturnDescription: false,
-      //   },
-      // ],
     }
   }
 )
