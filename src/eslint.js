@@ -15,7 +15,7 @@ const config = ts.config(
   rules.configs.variables,
   ...rules.configs.typescript,
   {
-    files: [ '**/*.js', '**/*.cjs', '**/*.mjs', '**/*.ts', '**/*.mts' ],
+    files: ['**/*.{js,cjs,mjs,jsx,ts,mts,tsx}'],
     languageOptions: {
       ecmaVersion: 'latest',
       globals: {
