@@ -2,7 +2,6 @@ export default {
   rules: {
     'accessor-pairs': ['error', { getWithoutSet: false, setWithoutGet: true }],
     'block-scoped-var': 'error',
-    complexity: 'warn',
     'consistent-return': 'off',
     curly: 'error',
     'dot-location': ['error', 'property'],

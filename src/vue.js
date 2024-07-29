@@ -5,13 +5,17 @@ export default [
   ...eslint.map((config) => {
     return {
       ...config,
-      files: ['*.vue', '**/*.vue'],
+      files: ['**/*.{js,cjs,mjs,jsx,ts,mts,tsx,vue}'],
     };
   }),
-  ...pluginVue.configs['flat/base'],
   ...pluginVue.configs['flat/recommended'],
   {
-    files: ['*.vue', '**/*.vue'],
+    files: ['**/*.{js,cjs,mjs,jsx,ts,mts,tsx,vue}'],
+    languageOptions: {
+      parserOptions: {
+        parser: '@typescript-eslint/parser'
+      }
+    },
     rules: {
       'vue/array-bracket-spacing': [
         'warn',
@@ -69,8 +73,3 @@ export default [
   //   },
   // }
 ]
-
-// module.exports = {
-//   parser: 'vue-eslint-parser',
-//   plugins: ['vue'],
-// };
