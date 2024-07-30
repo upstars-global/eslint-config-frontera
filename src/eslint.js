@@ -5,13 +5,19 @@ import ts from 'typescript-eslint';
 import rules from './rules/index.js';
 
 const config = ts.config(
-  js.configs.recommended,
+  {
+    ...js.configs.recommended,
+    name: 'eslint/js/recommended',
+  },
   ...ts.configs.recommended,
-  eslintConfigPrettier,
+  {
+    ...eslintConfigPrettier,
+    name: 'eslint-config/prettier',
+  },
   rules.configs.bestPractices,
   rules.configs.es6,
-  rules.configs.node,
-  rules.configs.style,
+  ...rules.configs.node,
+  rules.configs.stylistic,
   rules.configs.variables,
   ...rules.configs.typescript,
   {
@@ -26,12 +32,11 @@ const config = ts.config(
       parser: ts.parser,
       sourceType: 'module',
     },
+    name: 'frontera:eslint:setup',
     plugins: {
       '@typescript-eslint': ts.plugin,
     },
     rules: {
-      // Possible Errors (overrides from recommended set)
-      'no-extra-parens': 'off',
       // Strict Mode - for ES6, never use strict.
       strict: ['error', 'never'],
     }

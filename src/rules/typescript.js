@@ -1,5 +1,6 @@
 export default [
   {
+    name: 'frontera:rules:ts',
     rules: {
       '@typescript-eslint/init-declarations': 'error',
       '@typescript-eslint/no-empty-function': 'off',
@@ -15,6 +16,7 @@ export default [
   },
   {
     files: ['**/*.ts'],
+    name: 'frontera:rules:ts-overrides',
     rules: {
       'no-undef': 'off',
     },

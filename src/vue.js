@@ -10,6 +10,7 @@ export default [
         parser: '@typescript-eslint/parser'
       }
     },
+    name: 'frontera:vue:setup',
     rules: {
       'vue/array-bracket-spacing': [
         'warn',
@@ -20,6 +21,7 @@ export default [
           singleValue: true,
         },
       ],
+      'vue/block-order': 'warn',
       'vue/html-closing-bracket-newline': [
         'error',
         {
@@ -60,10 +62,4 @@ export default [
       'vue/valid-v-model': 'error'
     }
   },
-  // {
-  //   files: ['**/*.vue'],
-  //   rules: {
-  //     'no-undef': 'off',
-  //   },
-  // }
 ]
