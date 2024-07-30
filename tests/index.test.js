@@ -60,7 +60,7 @@ describe('run eslint and make sure it works', () => {
       const code = 'const str = \'test quotes rule\';\n'
       const error = await getLintMessage(code, linter)
 
-      expect(error.ruleId).toStrictEqual('quotes')
+      expect(error.ruleId).toStrictEqual('@stylistic/js/quotes')
       expect(error.severity).toStrictEqual(warnSeverity)
       expect(error.message).toContain('Strings must use doublequote.')
     })
@@ -89,7 +89,7 @@ describe('run eslint and make sure it works', () => {
       const code = 'const foo = 0\n'
       const error = await getLintMessage(code, linter)
 
-      expect(error.ruleId).toStrictEqual('semi')
+      expect(error.ruleId).toStrictEqual('@stylistic/js/semi')
       expect(error.severity).toStrictEqual(errorSeverity)
       expect(error.message).toStrictEqual('Missing semicolon.')
     })

@@ -7,6 +7,8 @@ export default [
     rules: {
       'n/global-require': 'off',
       'n/handle-callback-err': 'warn',
+      'n/no-missing-import': 'off',
+      'n/no-missing-require': 'off',
       'n/no-mixed-requires': 'warn',
       'n/no-new-require': 'error',
       'n/no-path-concat': 'error',
@@ -14,6 +16,7 @@ export default [
       'n/no-process-exit': 'off',
       'n/no-restricted-modules': 'off',
       'n/no-sync': 'warn',
+      'n/no-unpublished-import': 'off',
     }
   }
 ]
