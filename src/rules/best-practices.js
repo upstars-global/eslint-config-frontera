@@ -1,12 +1,10 @@
-/** @type {import('eslint').ESLint.ConfigData}  */
-module.exports = {
+export default {
+  name: 'frontera:rules:best-practices',
   rules: {
     'accessor-pairs': ['error', { getWithoutSet: false, setWithoutGet: true }],
     'block-scoped-var': 'error',
-    complexity: 'warn',
     'consistent-return': 'off',
     curly: 'error',
-    'dot-location': ['error', 'property'],
     'dot-notation': 'error',
     eqeqeq: ['error', 'smart'],
     'guard-for-in': 'error',
@@ -21,7 +19,7 @@ module.exports = {
     'no-eval': 'error',
     'no-extend-native': 'error',
     'no-extra-bind': 'warn',
-    'no-floating-decimal': 'error',
+    'no-global-assign': 'error',
     'no-implicit-coercion': ['error', { boolean: true, number: true, string: true } ],
     'no-implied-eval': 'error',
     'no-invalid-this': 'error',
@@ -30,15 +28,12 @@ module.exports = {
     'no-lone-blocks': 'warn',
     'no-loop-func': 'error',
     'no-magic-numbers': ['off', { ignore: [-1, 0, 1, 200, 404, 500] }],
-    'no-multi-spaces': 'error',
     'no-multi-str': 'error',
-    'no-native-reassign': 'error',
     'no-new': 'error',
     'no-new-func': 'error',
     'no-new-wrappers': 'error',
     'no-octal-escape': 'error',
     'no-param-reassign': 'error',
-    'no-process-env': 'off',
     'no-proto': 'error',
     'no-redeclare': 'error',
     'no-return-assign': 'error',
@@ -54,7 +49,6 @@ module.exports = {
     'no-with': 'warn',
     radix: 'warn',
     'vars-on-top': 'error',
-    'wrap-iife': ['error', 'outside'],
     yoda: 'error',
   }
 }

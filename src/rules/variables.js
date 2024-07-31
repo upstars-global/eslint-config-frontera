@@ -1,7 +1,6 @@
-/** @type {import('eslint').ESLint.ConfigData}  */
-module.exports = {
+export default {
+  name: 'frontera:rules:variables',
   rules: {
-    'no-catch-shadow': 'warn',
     'no-delete-var': 'error',
     'no-label-var': 'error',
     'no-shadow-restricted-names': 'error',

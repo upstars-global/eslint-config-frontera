@@ -1,12 +1,8 @@
-/** @type {import('eslint').ESLint.ConfigData}  */
-module.exports = {
+export default {
+  name: 'frontera:rules:es6',
   rules: {
-    'arrow-parens': ['warn', 'always'],
-    'arrow-spacing': ['error', { after: true, before: true }],
     'constructor-super': 'error',
-    'generator-star-spacing': ['error', 'before'],
     'no-class-assign': 'error',
-    'no-confusing-arrow': 'error',
     'no-const-assign': 'error',
     'no-constant-condition': 'error',
     'no-dupe-class-members': 'error',

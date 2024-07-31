@@ -1,49 +1,46 @@
-const bestPractices = require.resolve('./rules/best-practices');
-const es6 = require.resolve('./rules/es6');
-const node = require.resolve('./rules/node');
-const style = require.resolve('./rules/style');
-const eslint = require.resolve('./rules/typescript');
-const variables = require.resolve('./rules/variables');
+import eslintConfigPrettier from 'eslint-config-prettier';
+import globals from 'globals';
+import js from '@eslint/js';
+import ts from 'typescript-eslint';
+import rules from './rules/index.js';
 
-/** @type {import('eslint').ESLint.ConfigData}  */
-module.exports = {
-  env: {
-    amd: true,
-    browser: true,
-    es6: true,
-    node: true,
+const config = ts.config(
+  {
+    ...js.configs.recommended,
+    name: 'eslint/js/recommended',
   },
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'prettier',
-    bestPractices,
-    es6,
-    node,
-    style,
-    variables,
-    eslint
-  ],
-  parserOptions: {
-    ecmaVersion: 'latest',
-    parser: '@typescript-eslint/parser',
-    sourceType: 'module',
+  ...ts.configs.recommended,
+  {
+    ...eslintConfigPrettier,
+    name: 'eslint-config/prettier',
   },
-  plugins: ['@typescript-eslint'],
-  rules: {
-    // Possible Errors (overrides from recommended set)
-    'no-extra-parens': 'off',
-    // Strict Mode - for ES6, never use strict.
-    strict: ['error', 'never'],
-    // All JSDoc comments must be valid
-    'valid-jsdoc': [
-      'error',
-      {
-        prefer: { return: 'returns' },
-        requireParamDescription: true,
-        requireReturn: false,
-        requireReturnDescription: false,
+  rules.configs.bestPractices,
+  rules.configs.es6,
+  ...rules.configs.node,
+  rules.configs.stylistic,
+  rules.configs.variables,
+  ...rules.configs.typescript,
+  {
+    languageOptions: {
+      ecmaVersion: 'latest',
+      globals: {
+        ...globals.amd,
+        ...globals.browser,
+        ...globals.es2025,
+        ...globals.node,
       },
-    ],
+      parser: ts.parser,
+      sourceType: 'module',
+    },
+    name: 'frontera:eslint:setup',
+    plugins: {
+      '@typescript-eslint': ts.plugin,
+    },
+    rules: {
+      // Strict Mode - for ES6, never use strict.
+      strict: ['error', 'never'],
+    }
   }
-};
+)
+
+export default config

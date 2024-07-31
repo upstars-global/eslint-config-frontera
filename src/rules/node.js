@@ -1,13 +1,22 @@
-/** @type {import('eslint').ESLint.ConfigData}  */
-module.exports = {
-  rules: {
-    'global-require': 'off',
-    'handle-callback-err': 'warn',
-    'no-mixed-requires': 'warn',
-    'no-new-require': 'error',
-    'no-path-concat': 'error',
-    'no-process-exit': 'off',
-    'no-restricted-modules': 'off',
-    'no-sync': 'warn',
+import nodePlugin from 'eslint-plugin-n'
+
+export default [
+  nodePlugin.configs['flat/recommended-script'],
+  {
+    name: 'frontera:rules:node',
+    rules: {
+      'n/global-require': 'off',
+      'n/handle-callback-err': 'warn',
+      'n/no-missing-import': 'off',
+      'n/no-missing-require': 'off',
+      'n/no-mixed-requires': 'warn',
+      'n/no-new-require': 'error',
+      'n/no-path-concat': 'error',
+      'n/no-process-env': 'off',
+      'n/no-process-exit': 'off',
+      'n/no-restricted-modules': 'off',
+      'n/no-sync': 'warn',
+      'n/no-unpublished-import': 'off',
+    }
   }
-}
+]
