@@ -1,9 +1,11 @@
+import vueI18n from '@intlify/eslint-plugin-vue-i18n'
 import pluginVue from 'eslint-plugin-vue'
 import eslint from './eslint.js'
 
 export default [
   ...eslint,
   ...pluginVue.configs['flat/recommended'],
+  ...vueI18n.configs['flat/recommended'],
   {
     languageOptions: {
       parserOptions: {
